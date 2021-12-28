@@ -1,0 +1,193 @@
+2021-12-29 00:13:36,949:INFO:PyCaret Supervised Module
+2021-12-29 00:13:36,949:INFO:ML Usecase: anomaly
+2021-12-29 00:13:36,949:INFO:version 2.3.5
+2021-12-29 00:13:36,949:INFO:Initializing setup()
+2021-12-29 00:13:36,949:INFO:setup(target=None, ml_usecase=anomaly, available_plots={'tsne': 'Anomaly TSnE (3d)', 'umap': 'UMAP Dimensionality'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=mode, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=False, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=False, data_split_stratify=False, fold_strategy=kfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=None, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=True, verbose=True, profile=False, profile_kwargs=None, display=None)
+2021-12-29 00:13:36,960:INFO:Checking environment
+2021-12-29 00:13:36,962:INFO:python_version: 3.8.12
+2021-12-29 00:13:36,963:INFO:python_build: ('default', 'Oct 12 2021 03:01:40')
+2021-12-29 00:13:36,964:INFO:machine: AMD64
+2021-12-29 00:13:36,975:INFO:platform: Windows-10-10.0.19042-SP0
+2021-12-29 00:13:36,977:WARNING:cannot find psutil installation. memory not traceable. Install psutil using pip to enable memory logging.
+2021-12-29 00:13:36,977:INFO:Checking libraries
+2021-12-29 00:13:36,979:INFO:pd==1.3.5
+2021-12-29 00:13:36,980:INFO:numpy==1.19.5
+2021-12-29 00:13:36,980:INFO:sklearn==0.23.2
+2021-12-29 00:13:36,981:INFO:lightgbm==3.3.1
+2021-12-29 00:13:36,983:WARNING:catboost not found
+2021-12-29 00:13:36,984:WARNING:xgboost not found
+2021-12-29 00:13:37,365:INFO:mlflow==1.22.0
+2021-12-29 00:13:37,366:INFO:Checking Exceptions
+2021-12-29 00:13:37,367:INFO:Declaring global variables
+2021-12-29 00:13:37,368:INFO:USI: f091
+2021-12-29 00:13:37,369:INFO:pycaret_globals: {'target_param', 'fold_param', 'fold_shuffle_param', 'create_model_container', 'html_param', 'imputation_regressor', '_all_metrics', 'fix_imbalance_param', '_all_models', 'n_jobs_param', 'pycaret_globals', 'iterative_imputation_iters_param', '_gpu_n_jobs_param', 'exp_name_log', 'transform_target_method_param', 'display_container', 'seed', 'fold_groups_param_full', 'master_model_container', 'fold_groups_param', '_internal_pipeline', 'experiment__', 'stratify_param', 'logging_param', '_available_plots', 'prep_pipe', 'imputation_classifier', 'log_plots_param', '_ml_usecase', 'fold_generator', 'transform_target_param', 'fix_imbalance_method_param', 'USI', 'X', '_all_models_internal', 'data_before_preprocess', 'gpu_param'}
+2021-12-29 00:13:37,370:INFO:Preparing display monitor
+2021-12-29 00:13:37,371:INFO:Preparing display monitor
+2021-12-29 00:13:37,381:INFO:Importing libraries
+2021-12-29 00:13:37,381:INFO:Copying data for preprocessing
+2021-12-29 00:13:37,387:INFO:Declaring preprocessing parameters
+2021-12-29 00:13:37,389:INFO:Creating preprocessing pipeline
+2021-12-29 00:13:37,404:INFO:Preprocessing pipeline created successfully
+2021-12-29 00:13:37,404:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2021-12-29 00:13:37,405:INFO:Creating global containers
+2021-12-29 00:13:37,407:INFO:Internal pipeline: Pipeline(memory=None, steps=[('empty_step', 'passthrough')], verbose=False)
+2021-12-29 00:13:37,500:INFO:Creating grid variables
+2021-12-29 00:13:37,503:INFO:create_model_container: 0
+2021-12-29 00:13:37,504:INFO:master_model_container: 0
+2021-12-29 00:13:37,505:INFO:display_container: 1
+2021-12-29 00:13:37,511:INFO:Pipeline(memory=None,
+         steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=[],
+                                      display_types=False, features_todrop=[],
+                                      id_columns=[], ml_usecase='regression',
+                                      numerical_features=[],
+                                      target='UNSUPERVISED_DUMMY_TARGET',
+                                      time_features=[])),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='most frequent',
+                                fill_value_categorical=None,
+                                fill_value_numerical=Non...
+                ('scaling', 'passthrough'), ('P_transform', 'passthrough'),
+                ('binn', 'passthrough'), ('rem_outliers', 'passthrough'),
+                ('cluster_all', 'passthrough'),
+                ('dummy', Dummify(target='UNSUPERVISED_DUMMY_TARGET')),
+                ('fix_perfect', 'passthrough'),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough')],
+         verbose=False)
+2021-12-29 00:13:37,512:INFO:setup() succesfully completed......................................
+2021-12-29 00:13:37,577:INFO:Initializing create_model()
+2021-12-29 00:13:37,577:INFO:create_model(estimator=iforest, num_clusters=4, fraction=0.05, ground_truth=None, round=4, fit_kwargs=None, verbose=True, system=True, add_to_model_list=True, raise_num_clusters=False, display=None, kwargs={})
+2021-12-29 00:13:37,579:INFO:Checking exceptions
+2021-12-29 00:13:37,580:INFO:Preparing display monitor
+2021-12-29 00:13:37,592:INFO:Importing libraries
+2021-12-29 00:13:37,602:INFO:Importing untrained model
+2021-12-29 00:13:37,613:INFO:Isolation Forest Imported succesfully
+2021-12-29 00:13:37,623:INFO:Fitting Model
+2021-12-29 00:13:38,062:INFO:IForest(behaviour='new', bootstrap=False, contamination=0.05,
+    max_features=1.0, max_samples='auto', n_estimators=100, n_jobs=-1,
+    random_state=8886, verbose=0)
+2021-12-29 00:13:38,063:INFO:create_models() succesfully completed......................................
+2021-12-29 00:13:38,064:INFO:Uploading results into container
+2021-12-29 00:13:38,065:INFO:Uploading model into container now
+2021-12-29 00:13:38,066:INFO:create_model_container: 1
+2021-12-29 00:13:38,067:INFO:master_model_container: 1
+2021-12-29 00:13:38,067:INFO:display_container: 2
+2021-12-29 00:13:38,069:INFO:IForest(behaviour='new', bootstrap=False, contamination=0.05,
+    max_features=1.0, max_samples='auto', n_estimators=100, n_jobs=-1,
+    random_state=8886, verbose=0)
+2021-12-29 00:13:38,069:INFO:create_model() succesfully completed......................................
+2021-12-29 00:13:38,123:INFO:Initializing assign_model()
+2021-12-29 00:13:38,124:INFO:assign_model(model=IForest(behaviour='new', bootstrap=False, contamination=0.05,
+    max_features=1.0, max_samples='auto', n_estimators=100, n_jobs=-1,
+    random_state=8886, verbose=0), transformation=False, score=True, verbose=True)
+2021-12-29 00:13:38,125:INFO:Checking exceptions
+2021-12-29 00:13:38,126:INFO:Determining Trained Model
+2021-12-29 00:13:38,127:INFO:Trained Model : Isolation Forest
+2021-12-29 00:13:38,127:INFO:Copying data
+2021-12-29 00:13:38,130:INFO:(559, 32)
+2021-12-29 00:13:38,130:INFO:assign_model() succesfully completed......................................
+2021-12-29 00:13:38,131:INFO:Initializing plot_model()
+2021-12-29 00:13:38,132:INFO:plot_model(fold=None, use_train_data=False, verbose=True, is_in_evaluate=False, display=None, display_format=None, estimator=IForest(behaviour='new', bootstrap=False, contamination=0.05,
+    max_features=1.0, max_samples='auto', n_estimators=100, n_jobs=-1,
+    random_state=8886, verbose=0), feature_name=None, fit_kwargs=None, groups=None, label=False, plot=tsne, save=False, scale=1, system=True)
+2021-12-29 00:13:38,133:INFO:Checking exceptions
+2021-12-29 00:13:38,134:INFO:Preparing display monitor
+2021-12-29 00:13:38,139:INFO:Preloading libraries
+2021-12-29 00:13:38,147:INFO:Copying training dataset
+2021-12-29 00:13:38,148:INFO:Plot type: tsne
+2021-12-29 00:13:38,188:INFO:SubProcess assign_model() called ==================================
+2021-12-29 00:13:38,189:INFO:Initializing assign_model()
+2021-12-29 00:13:38,190:INFO:assign_model(model=IForest(behaviour='new', bootstrap=False, contamination=0.05,
+    max_features=1.0, max_samples='auto', n_estimators=100, n_jobs=-1,
+    random_state=8886, verbose=0), transformation=True, score=False, verbose=False)
+2021-12-29 00:13:38,191:INFO:Checking exceptions
+2021-12-29 00:13:38,192:INFO:Determining Trained Model
+2021-12-29 00:13:38,193:INFO:Trained Model : Isolation Forest
+2021-12-29 00:13:38,193:INFO:Copying data
+2021-12-29 00:13:38,195:INFO:Transformation param set to True. Assigned clusters are attached on transformed dataset.
+2021-12-29 00:13:38,196:INFO:(559, 31)
+2021-12-29 00:13:38,197:INFO:assign_model() succesfully completed......................................
+2021-12-29 00:13:38,198:INFO:SubProcess assign_model() end ==================================
+2021-12-29 00:13:38,201:INFO:Getting dummies to cast categorical variables
+2021-12-29 00:13:38,201:INFO:Fitting TSNE()
+2021-12-29 00:13:42,810:INFO:Rendering Visual
+2021-12-29 00:13:44,181:INFO:Visual Rendered Successfully
+2021-12-29 00:13:44,289:INFO:plot_model() succesfully completed......................................
+2021-12-29 00:13:44,290:INFO:Initializing plot_model()
+2021-12-29 00:13:44,291:INFO:plot_model(fold=None, use_train_data=False, verbose=True, is_in_evaluate=False, display=None, display_format=None, estimator=IForest(behaviour='new', bootstrap=False, contamination=0.05,
+    max_features=1.0, max_samples='auto', n_estimators=100, n_jobs=-1,
+    random_state=8886, verbose=0), feature_name=None, fit_kwargs=None, groups=None, label=False, plot=umap, save=False, scale=1, system=True)
+2021-12-29 00:13:44,292:INFO:Checking exceptions
+2021-12-29 00:13:44,293:INFO:Preparing display monitor
+2021-12-29 00:13:44,306:INFO:Preloading libraries
+2021-12-29 00:13:44,321:INFO:Copying training dataset
+2021-12-29 00:13:44,322:INFO:Plot type: umap
+2021-12-29 00:13:44,407:INFO:SubProcess assign_model() called ==================================
+2021-12-29 00:13:44,409:INFO:Initializing assign_model()
+2021-12-29 00:13:44,409:INFO:assign_model(model=IForest(behaviour='new', bootstrap=False, contamination=0.05,
+    max_features=1.0, max_samples='auto', n_estimators=100, n_jobs=-1,
+    random_state=8886, verbose=0), transformation=True, score=False, verbose=False)
+2021-12-29 00:13:44,410:INFO:Checking exceptions
+2021-12-29 00:13:44,411:INFO:Determining Trained Model
+2021-12-29 00:13:44,413:INFO:Trained Model : Isolation Forest
+2021-12-29 00:13:44,413:INFO:Copying data
+2021-12-29 00:13:44,414:INFO:Transformation param set to True. Assigned clusters are attached on transformed dataset.
+2021-12-29 00:13:44,416:INFO:(559, 31)
+2021-12-29 00:13:44,417:INFO:assign_model() succesfully completed......................................
+2021-12-29 00:13:44,418:INFO:SubProcess assign_model() end ==================================
+2021-12-29 00:14:01,666:INFO:Fitting UMAP()
+2021-12-29 00:14:11,741:INFO:Rendering Visual
+2021-12-29 00:14:12,085:INFO:Visual Rendered Successfully
+2021-12-29 00:14:12,248:INFO:plot_model() succesfully completed......................................
+2021-12-29 00:14:12,256:INFO:Initializing save_model()
+2021-12-29 00:14:12,256:INFO:save_model(model=IForest(behaviour='new', bootstrap=False, contamination=0.05,
+    max_features=1.0, max_samples='auto', n_estimators=100, n_jobs=-1,
+    random_state=8886, verbose=0), model_name=iforest_model, prep_pipe_=Pipeline(memory=None,
+         steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=[],
+                                      display_types=False, features_todrop=[],
+                                      id_columns=[], ml_usecase='regression',
+                                      numerical_features=[],
+                                      target='UNSUPERVISED_DUMMY_TARGET',
+                                      time_features=[])),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='most frequent',
+                                fill_value_categorical=None,
+                                fill_value_numerical=Non...
+                ('scaling', 'passthrough'), ('P_transform', 'passthrough'),
+                ('binn', 'passthrough'), ('rem_outliers', 'passthrough'),
+                ('cluster_all', 'passthrough'),
+                ('dummy', Dummify(target='UNSUPERVISED_DUMMY_TARGET')),
+                ('fix_perfect', 'passthrough'),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough')],
+         verbose=False), verbose=True, kwargs={})
+2021-12-29 00:14:12,257:INFO:Adding model into prep_pipe
+2021-12-29 00:14:12,424:INFO:iforest_model.pkl saved in current working directory
+2021-12-29 00:14:12,432:INFO:Pipeline(memory=None,
+         steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=[],
+                                      display_types=False, features_todrop=[],
+                                      id_columns=[], ml_usecase='regression',
+                                      numerical_features=[],
+                                      target='UNSUPERVISED_DUMMY_TARGET',
+                                      time_features=[])),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='most frequent',
+                                fill_value_categorical=None,
+                                fill_value_numerical=Non...
+                ('fix_perfect', 'passthrough'),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model',
+                 IForest(behaviour='new', bootstrap=False, contamination=0.05,
+    max_features=1.0, max_samples='auto', n_estimators=100, n_jobs=-1,
+    random_state=8886, verbose=0)]],
+         verbose=False)
+2021-12-29 00:14:12,433:INFO:save_model() successfully completed......................................
+2021-12-29 00:14:12,563:INFO:Initializing load_model()
+2021-12-29 00:14:12,564:INFO:load_model(model_name=iforest_model, platform=None, authentication=None, verbose=True)

@@ -1,5 +1,6 @@
 from pycaret.anomaly import *
 from sklearn.datasets import load_breast_cancer
+import time
 
 df = load_breast_cancer(as_frame=True)['data']
 df_train = df.iloc[:-10]
@@ -10,6 +11,7 @@ anom = setup(data = df_train, silent = True)
 anom_model = create_model(model = 'iforest', fraction = 0.05)
 
 results = assign_model(anom_model)
+print(results)
 
 plot_model(anom_model, plot = 'tsne')
 
